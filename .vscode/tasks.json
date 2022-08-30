@@ -2,60 +2,60 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build-unit02-hilo",
+            "label": "build-Unit02",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/unit02-hilo/unit02-hilo.csproj",
+                "${workspaceFolder}/Unit02/Unit02.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "build-unit03-jumper",
+            "label": "build-Unit03",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/unit03-jumper/unit03-jumper.csproj",
+                "${workspaceFolder}/Unit03/Unit03.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "build-unit04-greed",
+            "label": "build-Unit04",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/unit04-greed/unit04-greed.csproj",
+                "${workspaceFolder}/Unit04/Unit04.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "build-unit05-cycle",
+            "label": "build-Unit05",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/unit05-cycle/unit05-cycle.csproj",
+                "${workspaceFolder}/Unit05/Unit05.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "build-unit06-game",
+            "label": "build-Unit06",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/unit06-game/unit06-game.csproj",
+                "${workspaceFolder}/Unit06/Unit06.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

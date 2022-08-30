@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unit02-hilo", "unit02-hilo\unit02-hilo.csproj", "{5BEAD0C8-6BAC-4CED-9A65-ED769C4F9A51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit02", "Unit02\Unit02.csproj", "{5BEAD0C8-6BAC-4CED-9A65-ED769C4F9A51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unit03-jumper", "unit03-jumper\unit03-jumper.csproj", "{33BC84BF-31BC-4F21-A927-2EA9A189B1C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit03", "Unit03\Unit03.csproj", "{33BC84BF-31BC-4F21-A927-2EA9A189B1C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unit04-greed", "unit04-greed\unit04-greed.csproj", "{EE926C17-B0CA-4F58-AC1F-1EF8A30B22AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit04", "Unit04\Unit04.csproj", "{EE926C17-B0CA-4F58-AC1F-1EF8A30B22AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unit05-cycle", "unit05-cycle\unit05-cycle.csproj", "{61873BF4-264B-4EC4-8DAF-3C33CCE9A146}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit05", "Unit05\Unit05.csproj", "{61873BF4-264B-4EC4-8DAF-3C33CCE9A146}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unit06-game", "unit06-game\unit06-game.csproj", "{82A81AE6-805D-4E54-8C81-D43BED1D3FAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit06", "Unit06\Unit06.csproj", "{82A81AE6-805D-4E54-8C81-D43BED1D3FAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace unit06_game
+namespace Unit06
 {
     class Program
     {

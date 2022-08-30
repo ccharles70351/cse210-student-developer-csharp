@@ -3,11 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>unit05_cycle</RootNamespace>
+    <RootNamespace>Unit02</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="raylib-cs" Version="3.7.0.1" />
-  </ItemGroup>
 
 </Project>

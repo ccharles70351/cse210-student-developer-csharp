@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace unit05_cycle
+namespace Unit02
 {
     class Program
     {

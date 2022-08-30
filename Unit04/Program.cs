@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace unit02_hilo
+namespace Unit04
 {
     class Program
     {
