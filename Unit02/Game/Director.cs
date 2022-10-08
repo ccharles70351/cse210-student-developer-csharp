@@ -13,7 +13,7 @@ namespace Unit02.Game
     {
         bool _isPlaying = true;
         int _score = 0;
-        int _totalScore = 0;
+        int _totalScore = 300;
         Card card;
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace Unit02.Game
         /// </summary>
         public Director()
         {
-            Card card = new Card();
+            card = new Card();
         }
 
         /// <summary>
@@ -45,6 +45,7 @@ namespace Unit02.Game
             Console.Write("Draw card? [y/n] ");
             string drawCard = Console.ReadLine();
             _isPlaying = (drawCard.ToLower() == "y");
+            Console.Write($"Your current point score is: {_totalScore}\n");
         }
 
         /// <summary>
@@ -65,7 +66,7 @@ namespace Unit02.Game
         }
 
         /// <summary>
-        /// Displays the dice and the score. Also asks the player if they want to roll again. 
+        /// Displays the next card and the scores. Also asks the player if they want to roll again. 
         /// </summary>
         public void DoOutputs()
         {
@@ -74,10 +75,11 @@ namespace Unit02.Game
                 return;
             }
 
-
+            Console.WriteLine($"The next card was: {card.nextCardNumber}");
             Console.WriteLine($"You received: {_score}");
             Console.WriteLine($"Your score is: {_totalScore}\n");
-            _isPlaying = (_score > 0);
+
+            _isPlaying = (_totalScore > 0);
         }
     }
 }
