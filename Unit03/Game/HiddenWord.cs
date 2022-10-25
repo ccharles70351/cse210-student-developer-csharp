@@ -94,6 +94,7 @@ namespace Unit03.Game
             {
                 if (jumper[4] == "    xxx")
                 {
+                    jumper[5] = "     x";
                     return false;
                 }
                 else if (winPoint == word.Length)

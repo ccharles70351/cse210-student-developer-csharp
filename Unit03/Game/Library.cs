@@ -8,20 +8,23 @@ namespace Unit03.Game
         public string hiddenWord;
         public Library()
         {
-        hiddenWord = "Banana";
         }
 
         public string getWord(string difficulty)
             {
                 if (difficulty == "h")
-                {
-                    hiddenWord = "Apple";
+                {;
+                    Random r = new Random();
+                    string[] words = {"ox", "lithium", "ion", "dweeb"};
+                    hiddenWord = words[r.Next(0, words.Length)];
                     return hiddenWord;
                 }
 
                 else
                 {
-                    hiddenWord = "Orange";
+                    Random r = new Random();
+                    string[] words = {"apple", "orange", "banana", "kiwi"};
+                    hiddenWord = words[r.Next(0, words.Length)];
                     return hiddenWord;
                 }
                 
