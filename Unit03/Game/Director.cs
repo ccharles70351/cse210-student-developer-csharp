@@ -1,3 +1,4 @@
+using System;
 namespace Unit03.Game
 {
     /// <summary>
@@ -7,62 +8,66 @@ namespace Unit03.Game
     /// </para>
     /// </summary>
     public class Director
+{
+    private TerminalService _terminalService = new TerminalService();
+    private Library _library = new Library();
+    private HiddenWord _hiddenWord;
+    bool _isPlaying = true;
+    public char guess;
+
+    /// <summary>
+    /// Constructs a new instance of Director.
+    /// </summary>
+    public Director()
     {
-        private Hider _hider = new Hider();
-        private bool _isPlaying = true;
-        private Seeker _seeker = new Seeker();
-        private TerminalService _terminalService = new TerminalService();
+    }
 
-        /// <summary>
-        /// Constructs a new instance of Director.
-        /// </summary>
-        public Director()
-        {
-        }
+    /// <summary>
+    /// Starts the game
+    /// </summary>
+    public void StartGame()
+    {
+        string diff = _terminalService.ReadText("What difficulty: hard or easy? [h/e]");
 
-        /// <summary>
-        /// Starts the game by running the main game loop.
-        /// </summary>
-        public void StartGame()
+        _library.getWord(diff);
+        _hiddenWord = new HiddenWord(_library.hiddenWord);
+        _hiddenWord.drawState();
+        while (_isPlaying)
         {
-            while (_isPlaying)
-            {
-                GetInputs();
-                DoUpdates();
-                DoOutputs();
-            }
-        }
-
-        /// <summary>
-        /// Moves the seeker to a new location.
-        /// </summary>
-        private void GetInputs()
-        {
-            _terminalService.WriteText(_hider._location.ToString());
-            int location = _terminalService.ReadNumber("\nEnter a location [1-1000]: ");
-            _seeker.MoveLocation(location);
-        }
-
-        /// <summary>
-        /// Keeps watch on where the seeker is moving.
-        /// </summary>
-        private void DoUpdates()
-        {
-            _hider.WatchSeeker(_seeker);
-        }
-
-        /// <summary>
-        /// Provides a hint for the seeker to use.
-        /// </summary>
-        private void DoOutputs()
-        {
-            string hint = _hider.GetHint();
-            _terminalService.WriteText(hint);
-            if (_hider.IsFound())
-            {
-                _isPlaying = false;
-            }
-            
+            GetInputs();
+            DoUpdates();
+            DoOutputs();
         }
     }
+
+    /// <summary>
+    /// Gets the user's guess
+    /// </summary>
+    private void GetInputs()
+    {
+        guess = _terminalService.ReadText("Guess a letter: ").ToCharArray()[0];
+    }
+
+    /// <summary>
+    /// Passes guess over to method
+    /// Receives answer whether game is over
+    /// </summary>
+    private void DoUpdates()
+    {
+        _hiddenWord.guessCharacter(guess);
+        _isPlaying = _hiddenWord.checkGameContinue();
+    }
+
+    /// <summary>
+    /// Draws state of game
+    /// </summary>
+    private void DoOutputs()
+    {
+        _hiddenWord.drawState();
+        if (_isPlaying == false)
+            {
+                _terminalService.WriteText("Game over!");
+            }
+    }
+}
 }

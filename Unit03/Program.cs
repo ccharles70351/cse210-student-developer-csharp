@@ -1,12 +1,19 @@
-﻿using System;
+﻿using Unit03.Game;
+using System;
 
 namespace Unit03
 {
     class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Starts the program using the given arguments.
+        /// </summary>
+        /// <param name="args">The given arguments.</param>
+        static int Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Director director = new Director();
+            director.StartGame();
+            return 0;
         }
     }
 }
